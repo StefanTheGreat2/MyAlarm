@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/createAlarmFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Alarm.CreateAlarmFragment"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:isScrollContainer="true"
+        android:scrollIndicators="top|bottom"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="horizontal"
+        android:verticalScrollbarPosition="defaultPosition"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/alarmTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_stroke"
+            android:backgroundTint="#ADC6DC"
+            android:drawableBottom="@drawable/alarm_main_bkg"
+            android:ems="10"
+            android:fontFamily="@font/bold"
+            android:foregroundTint="#0088FF"
+            android:hint="@string/alarm_name"
+            android:inputType="textPersonName"
+            android:singleLine="false"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textColorHighlight="#2C9CFF"
+            android:textColorHint="#810D4371"
+            android:textColorLink="#0088FF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout2" />
+
+        <LinearLayout
+            android:id="@+id/recurringBtns"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/time_picker_bkg"
+            android:orientation="horizontal"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alarmTime">
+
+
+            <ToggleButton
+                android:id="@+id/sun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/days_btns"
+                android:checked="true"
+                android:textColor="@color/black"
+                android:textOff="sun"
+                android:textOn="sun" />
+
+            <ToggleButton
+                android:id="@+id/mon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/days_btns"
+                android:checked="true"
+                android:textColor="@color/black"
+                android:textOff="mon"
+                android:textOn="mon" />
+
+            <ToggleButton
+                android:id="@+id/tue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/days_btns"
+                android:checked="true"
+                android:textColor="@color/black"
+                android:textOff="tue"
+                android:textOn="tue" />
+
+            <ToggleButton
+                android:id="@+id/wed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/days_btns"
+                android:checked="true"
+                android:textColor="@color/black"
+                android:textOff="wed"
+                android:textOn="wed" />
+
+
+            <ToggleButton
+                android:id="@+id/thu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/days_btns"
+                android:checked="true"
+                android:textColor="@color/black"
+                android:textOff="thu"
+                android:textOn="thu" />
+
+            <ToggleButton
+                android:id="@+id/fri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/days_btns"
+                android:checked="true"
+                android:textColor="@color/black"
+                android:textOff="fri"
+                android:textOn="fri"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ToggleButton
+                android:id="@+id/sat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/days_btns"
+                android:checked="true"
+                android:textColor="@color/black"
+                android:textOff="sat"
+                android:textOn="sat" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/alarmUiConstraint"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/time_picker_bkg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recurringBtns"
+            app:layout_constraintVertical_bias="0.0">
+
+            <Button
+                android:id="@+id/testAlarm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/button_background"
+                android:text="Test Alarm"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recurring" />
+
+            <Button
+                android:id="@+id/select"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/button_background"
+                android:text="Ringtone"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/testAlarm" />
+
+            <Button
+                android:id="@+id/createAlarm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/button_background"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/select" />
+
+            <SeekBar
+                android:id="@+id/alarmVolume"
+                android:layout_width="299dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/time_picker_bkg"
+                android:progressTint="#0088FF"
+                android:requiresFadingEdge="vertical"
+                android:soundEffectsEnabled="true"
+                android:thumbTint="#0088FF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/vibrateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="Vibrate"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/alarmVolume" />
+
+            <TextView
+                android:id="@+id/volumeTv"
+                android:layout_width="80dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:text="Volume"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:theme="@style/MySeekBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/alarmVolume" />
+
+            <TextView
+                android:id="@+id/recurringText"
+                android:layout_width="92dp"
+                android:layout_height="17dp"
+                android:enabled="true"
+                android:text="Set Repeating"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/recurring"
+                app:layout_constraintStart_toStartOf="@+id/recurring"
+                app:layout_constraintTop_toBottomOf="@+id/alarmVolume" />
+
+            <TextView
+                android:id="@+id/volume"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/blue_stroke"
+                android:gravity="center"
+                android:textColor="#A9005DFF"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/testAlarm"
+                app:layout_constraintEnd_toEndOf="@+id/volumeTv"
+                app:layout_constraintStart_toStartOf="@+id/volumeTv"
+                app:layout_constraintTop_toBottomOf="@+id/volumeTv" />
+
+            <ToggleButton
+                android:id="@+id/vibrate"
+                android:layout_width="55dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/days_btns"
+                android:textColor="@color/black"
+                android:textOff="OFF"
+                android:textOn="ON"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/alarmVolume" />
+
+            <ToggleButton
+                android:id="@+id/recurring"
+                android:layout_width="84dp"
+                android:layout_height="69dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/days_btns"
+                android:checked="false"
+                android:enabled="true"
+                android:focusedByDefault="true"
+                android:saveEnabled="true"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recurringText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="328dp"
+            android:layout_height="222dp"
+            android:background="@drawable/time_picker_bkg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="272dp"
+                android:layout_height="265dp"
+                android:theme="@style/MyTimePickerWidgetStyle"
+                android:timePickerMode="spinner"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

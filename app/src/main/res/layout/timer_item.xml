@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foregroundTint="#E6E7F1">
+<!--    android:background="@drawable/blue_stroke"-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/timerBackground"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/blue_stroke"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/startBtn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/start_timer"
+            app:layout_constraintEnd_toStartOf="@+id/timerTv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timerName" />
+
+        <Button
+            android:id="@+id/pauseBtn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/pause_timer"
+            app:layout_constraintEnd_toStartOf="@+id/timerTv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timerName" />
+
+        <Button
+            android:id="@+id/deleteBtn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/ic_baseline_delete_forever_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/timerName"
+            android:layout_width="220dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/minutesSeek"
+            android:layout_width="214dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/blue_stroke"
+            android:progressTint="#0088FF"
+            android:thumbTint="#0088FF"
+            android:tooltipText="Minutes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hoursSeek" />
+
+        <SeekBar
+            android:id="@+id/hoursSeek"
+            android:layout_width="99dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/blue_stroke"
+            android:progressTint="#0088FF"
+            android:thumbTint="#0088FF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pauseBtn"
+            app:layout_constraintVertical_bias="0.166" />
+
+        <SeekBar
+            android:id="@+id/secondsSeek"
+            android:layout_width="0dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="9dp"
+            android:background="@drawable/blue_stroke"
+            android:progressTint="#0088FF"
+            android:thumbTint="#0088FF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/minutesSeek"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/minutesSeek" />
+
+        <TextView
+            android:id="@+id/timerNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="timerName"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/timerTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/vonique"
+            android:gravity="center"
+            android:text="00:00:00"
+            android:textColor="#86143450"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.24"
+            app:layout_constraintStart_toEndOf="@+id/hoursSeek"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/resetTimer"
+            android:layout_width="88dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Reset"
+            android:fontFamily="@font/bold"
+            android:textColor="#AD617587"
+            app:layout_constraintBottom_toTopOf="@+id/resetTimer"
+            app:layout_constraintEnd_toEndOf="@+id/resetTimer"
+            app:layout_constraintStart_toStartOf="@+id/resetTimer" />
+
+        <Button
+            android:id="@+id/melodyBtn"
+            android:layout_width="63dp"
+            android:layout_height="14dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/reset"
+            app:layout_constraintEnd_toEndOf="@+id/resetTimer"
+            app:layout_constraintStart_toStartOf="@+id/resetTimer"
+            app:layout_constraintTop_toBottomOf="@+id/deleteBtn" />
+
+        <TextView
+            android:id="@+id/melody"
+            android:layout_width="72dp"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:text="Melody"
+            app:layout_constraintBottom_toTopOf="@+id/melodyBtn"
+            app:layout_constraintEnd_toEndOf="@+id/melodyBtn"
+            app:layout_constraintStart_toStartOf="@+id/melodyBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

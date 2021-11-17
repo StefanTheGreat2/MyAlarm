@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/alarmListFragment">
+    <fragment
+        android:id="@+id/alarmListFragment"
+        android:name="org.antem.myalarm.Alarm.AlarmListFragment"
+        android:label="fragment_alarm_list"
+        tools:layout="@layout/fragment_alarm_list">
+        <action
+            android:id="@+id/action_alarmListFragment_to_createAlarmFragment"
+            app:destination="@id/createAlarmFragment" />
+        <action
+            android:id="@+id/action_alarmListFragment_to_timersFragment2"
+            app:destination="@id/timersFragment" />
+        <action
+            android:id="@+id/action_alarmListFragment_to_stopWatchFragment"
+            app:destination="@id/stopWatchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAlarmFragment"
+        android:name="org.antem.myalarm.Alarm.CreateAlarmFragment"
+        android:label="fragment_create_alarm"
+        tools:layout="@layout/fragment_create_alarm" >
+        <action
+            android:id="@+id/action_createAlarmFragment2_to_alarmListFragment"
+            app:destination="@id/alarmListFragment" />
+        <action
+            android:id="@+id/action_createAlarmFragment_to_stopWatchFragment"
+            app:destination="@id/stopWatchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timersFragment"
+        android:name="org.antem.myalarm.Timer.TimersFragment"
+        android:label="fragment_timers"
+        tools:layout="@layout/fragment_timers" >
+        <action
+            android:id="@+id/action_timersFragment2_to_alarmListFragment"
+            app:destination="@id/alarmListFragment" />
+        <action
+            android:id="@+id/action_timersFragment_to_stopWatchFragment"
+            app:destination="@id/stopWatchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stopWatchFragment"
+        android:name="org.antem.myalarm.StopWatch.StopWatchFragment"
+        android:label="fragment_stop_watch"
+        tools:layout="@layout/fragment_stop_watch" >
+        <action
+            android:id="@+id/action_stopWatchFragment_to_timersFragment"
+            app:destination="@id/timersFragment" />
+        <action
+            android:id="@+id/action_stopWatchFragment_to_alarmListFragment"
+            app:destination="@id/alarmListFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MyAlarm</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="delete_all">Delete All</string>
+    <string name="alarm_name">Alarm Name</string>
+    <string name="stop_watch">Stop Watch</string>
+    <string name="timer">Timer</string>
+    <string name="alarm">Alarm</string>
+    <string name="sureTvText">Are You Sure?</string>
+</resources>
